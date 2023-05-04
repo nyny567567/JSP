@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<% int i = 5 %>  
+	<% int i = 5 %>
 
 	<p>
 	<%= 10 * 4 %> <br> <!-- out.print(10 *4); -->

@@ -3,7 +3,6 @@ package com.myweb.user.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -83,4 +82,57 @@ public class UserDAO {
 		}
 	}
 	
+	public int userCheck(String id, String pw) {
+        int check = 0;
+        String sql = "SELECT user_pw FROM my_user WHERE user_id = ?";
+        
+        try(Connection conn = ds.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setString(1, id);
+            
+            ResultSet rs = pstmt.executeQuery();
+            
+            if(rs.next()) {
+                if(rs.getString("user_pw").equals(pw)) {
+                    check = 1;
+                } else {
+                    check = 0;
+                }
+            } else {
+                check = -1;
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return check;
+    }
+
+    public UserVO getUserInfo(String id) {
+        String sql = "SELECT * FROM my_user WHERE user_id = ?";
+        
+        UserVO user = null;
+        try(Connection conn = ds.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setString(1, id);
+            
+            ResultSet rs = pstmt.executeQuery();
+            
+            rs.next();
+            
+            user = new UserVO(rs.getString("user_id"),
+                              rs.getString("user_pw"),
+                              rs.getString("user_name"),
+                              rs.getString("user_email"),
+                              rs.getString("user_address"));
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return user;
+    }
 }
