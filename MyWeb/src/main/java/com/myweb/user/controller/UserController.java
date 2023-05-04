@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.myweb.user.service.ChangePwService;
 import com.myweb.user.service.IUserService;
 import com.myweb.user.service.JoinService;
 import com.myweb.user.service.LoginService;
@@ -67,6 +68,10 @@ public class UserController extends HttpServlet {
 			System.out.println("비밀번호 변경 페이지로 이동 요청!");
 			response.sendRedirect("user/user_change_pw.jsp");
 			break;
+			
+		case "changePw":
+			System.out.println("비밀번호 변경 요청!");
+			sv = new ChangePwService();
 		}
 		
 	}

@@ -135,4 +135,9 @@ public class UserDAO {
         
         return user;
     }
+
+	public void changePassword(String id, String newPw) {
+		// TODO Auto-generated method stub
+		
+	}
 }
