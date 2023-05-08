@@ -30,7 +30,7 @@
                            <div class="form-group">
                                <label for="writer" hidden>작성자</label>
                             <!-- 로그인 성공시 제작된 session id를 이곳에 고정값으로 두고 변경을 하지 못하게.-->
-                               <input id="writer" name="bWriter" value=""
+                               <input id="writer" name="bWriter" value="${user.userId}"
                                type="text" class="form-control" placeholder="작성자" readonly>
                            </div>
    

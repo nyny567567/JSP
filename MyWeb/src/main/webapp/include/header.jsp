@@ -6,7 +6,7 @@
 <html>
 <head>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-idth, initial-scale=1">
 
@@ -34,9 +34,9 @@
 </head>
 <body>
 
-    <!-- header -->
+	<!-- header -->
     <div class="brand">
-        <a href="/MyWeb">My Web</a>
+    	<a href="/MyWeb">My Web</a>
     </div>
     <div class="address-bar">Welcome to MyWorld</div>
 
@@ -66,25 +66,25 @@
                         <a href="">Member</a>
                     </li>
                     <li>
-                        <a href="">BOARD</a>
+                        <a href="/MyWeb/list.board">BOARD</a>
                     </li>
                     <c:choose>
-                        <c:when test="${user == null}">
-                            <li>
-                                <a href="/MyWeb/loginPage.user">LOGIN</a>
-                            </li>
-                            <li>
-                                <a href="/MyWeb/joinPage.user" style="color:red">JOIN</a>
-                            </li>
-                        </c:when>
-                        <c:otherwise>
-                            <li>
-                                <a href="/MyWeb/logout.user">LOGOUT</a>
-                            </li>
-                            <li>
-                                <a href="/MyWeb/myPage.user" style="color:red">MyPage</a>
-                            </li>
-                        </c:otherwise>
+                    	<c:when test="${user == null}">
+		                    <li>
+		                        <a href="/MyWeb/loginPage.user">LOGIN</a>
+		                    </li>
+		                    <li>
+		                        <a href="/MyWeb/joinPage.user" style="color:red">JOIN</a>
+		                    </li>
+                    	</c:when>
+                    	<c:otherwise>
+		                    <li>
+		                        <a href="/MyWeb/logout.user">LOGOUT</a>
+		                    </li>
+		                    <li>
+		                        <a href="/MyWeb/myPage.user" style="color:red">MyPage</a>
+		                    </li>
+                    	</c:otherwise>
                     </c:choose>
                 </ul>
             </div>
@@ -95,7 +95,20 @@
         <!-- /.container -->
     </nav>
     <!-- end header -->
-    
+	
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
