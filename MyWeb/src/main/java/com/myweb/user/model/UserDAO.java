@@ -3,6 +3,7 @@ package com.myweb.user.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -144,9 +145,9 @@ public class UserDAO {
 		}
 		
 	}
-	
+
 	public void deleteUser(String id) {
-		String sql = "Delete from my_user WHERE user_id=?";
+		String sql = "DELETE FROM my_user WHERE user_id=?";
 		try(Connection conn = ds.getConnection();
 				PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			pstmt.setString(1, id);

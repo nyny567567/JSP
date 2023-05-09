@@ -21,6 +21,28 @@
 	 서버 이름: <%=request.getServerName() %> <br>
 	 포트 번호: <%=request.getServerPort() %> <br>
 	 IP 주소: <%=request.getRemoteAddr() %>
+	 
+	 
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

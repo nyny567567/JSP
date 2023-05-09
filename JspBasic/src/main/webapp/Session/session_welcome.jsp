@@ -26,7 +26,7 @@
  
     %>
     
-    <%@ include file="../Application/p" %>
+    <%@ include file="../Application/app_basic.jsp" %>
     
 <!DOCTYPE html>
 <html>
@@ -40,13 +40,21 @@
 	
 	<a href="session_login.jsp">로그인 페이지로</a>
 	<a href="../JspObjRequest/req_album.jsp">앨범 리스트 보기</a>
-
+	
 	<hr>
 	
 	<h3>요청된 횟수: <%=count %>회</h3>
-	
-	
+
 </body>
 </html>
 
 <% } %>
+
+
+
+
+
+
+
+
+

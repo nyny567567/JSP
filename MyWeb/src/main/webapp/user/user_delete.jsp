@@ -8,13 +8,13 @@
 </head>
 <body>
 
-    <%@ include file="../include/header.jsp" %>
-    
-    <div align="center" style="margin-bottom: 20px;">
-        <h3>현재 비밀번호를 입력하세요.</h3>
-        <hr>
-        
-    <form action="/MyWeb/delete.user" method="post" role="form" class="form-inline">
+	<%@ include file="../include/header.jsp" %>
+	
+	<div align="center" style="margin-bottom: 20px;">
+		<h3>현재 비밀번호를 입력하세요.</h3>
+		<hr>
+		
+	<form action="/MyWeb/delete.user" method="post" role="form" class="form-inline">
         <div class="form-group">
             <input type="password" name="check_pw" class="form-control" placeholder="현재 비밀번호"
             style="width: 225px">
@@ -29,11 +29,13 @@
 
     </form>
 
-    </div>
-    
-    
-    <%@ include file="../include/footer.jsp" %>
-    
+	</div>
+	
+	
+	<%@ include file="../include/footer.jsp" %>
+	
 
 </body>
 </html>
+
+

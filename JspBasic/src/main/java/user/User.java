@@ -6,7 +6,7 @@ public class User {
 	private String userPw;
 	private String userName;
 	private String userEmail;
-
+	
 	public User() {}
 
 	public User(String userId, String userPw, String userName, String userEmail) {
@@ -50,6 +50,5 @@ public class User {
 	}
 	
 	
-	
-	
+
 }

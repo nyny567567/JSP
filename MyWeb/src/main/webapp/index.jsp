@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>	
+<head>
 
     <!-- Script to Activate the Carousel -->
     <script>
@@ -118,8 +118,9 @@
 
         <!-- /.container -->
     </div>
-
-	<%@ include file="include/footer.jsp" %>
+    
+    <%@ include file="include/footer.jsp" %>
+    
 
 </body>
 

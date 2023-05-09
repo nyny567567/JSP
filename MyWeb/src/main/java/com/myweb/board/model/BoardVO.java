@@ -1,6 +1,6 @@
 package com.myweb.board.model;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 /*
  CREATE TABLE my_board (
@@ -8,15 +8,15 @@ import java.sql.Timestamp;
     writer VARCHAR2(30) NOT NULL,
     title VARCHAR2(100) NOT NULL,
     content VARCHAR2(2000),
-    reg_dte DATE DEFAULT sysdate,
+    reg_date DATE DEFAULT sysdate,
     hit NUMBER DEFAULT 0
-    );
-    
+);
+
 CREATE SEQUENCE board_seq
     START WITH 1
     INCREMENT BY 1
     MAXVALUE 1000
-    NOCYCLE
+    NOCYCLE 
     NOCACHE;
  */
 
@@ -26,12 +26,12 @@ public class BoardVO {
 	private String writer;
 	private String title;
 	private String content;
-	private Timestamp regDate;
+	private LocalDateTime regDate;
 	private int hit;
 	
 	public BoardVO() {}
 
-	public BoardVO(int boardId, String writer, String title, String content, Timestamp regDate, int hit) {
+	public BoardVO(int boardId, String writer, String title, String content, LocalDateTime regDate, int hit) {
 		super();
 		this.boardId = boardId;
 		this.writer = writer;
@@ -73,11 +73,11 @@ public class BoardVO {
 		this.content = content;
 	}
 
-	public Timestamp getRegDate() {
+	public LocalDateTime getRegDate() {
 		return regDate;
 	}
 
-	public void setRegDate(Timestamp regDate) {
+	public void setRegDate(LocalDateTime regDate) {
 		this.regDate = regDate;
 	}
 
@@ -95,6 +95,27 @@ public class BoardVO {
 				+ ", regDate=" + regDate + ", hit=" + hit + "]";
 	}
 	
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
