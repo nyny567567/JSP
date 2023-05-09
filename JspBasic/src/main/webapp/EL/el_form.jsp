@@ -8,21 +8,11 @@
 </head>
 <body>
 
-
-    <form action="el_con.jsp">
-        # 이름: <input type="text" name="name"> <br>
-        # 별명: <input type="text" name="nick"> <br>
-        <input type="submit" value="확인">
-    </form>
-    
-    
-
-
-
-
-
-
-
+	<form action="el_con.jsp">
+		# 이름: <input type="text" name="name"> <br>
+		# 별명: <input type="text" name="nick"> <br>
+		<input type="submit" value="확인">
+	</form>
 
 </body>
 </html>

@@ -5,36 +5,67 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+	<style>
+		table {
+			width: 800px;
+		}
+		
+		tr {
+			text-align: center;
+		}
+	</style>
+
 </head>
 <body>
 
-<div align="center">
-<table border="1" width="800" heign="400">
-<tr height="20%">
-<th width="20%">사진</th>
-<th width="20%">가수</th>
-<th width="20%">앨범 제목</th>
-<th width="20%">발매일</th>
-<tr align=center>
-<td><img src="10554246_20210325161233_500.jpg" width="100px"></td>
-<td>IU</td>
-<td>
-<a href="req_album_result.jsp?title=sel1">LILAC</a>
-</td>
-<td>2021.03.25</td>
-</tr>
-<tr align=center>
-<td><img src="1Cl5T0XXy1lz637307627208670072.jpg" width="100px"></td>
-<td>BLACKPINK</td>
-<td>
-	<a href="req_album_result.jsp?title=sel2">BORN PINK</a>
-</td>
-<td>2022.08.19</td>
-</tr>
-</table>
-</div>
-
-
+	<div align="center">
+			<table border="1">
+				<tr>
+					<th>앨범 커버</th>
+					<th>가수</th>
+					<th>제목</th>
+					<th>발매일</th>
+				</tr>
+				<tr>
+					<td>
+						<img alt="pic1" src="ive.jpg" width="100px" height="100px">
+					</td>
+					<td>IVE (아이브)</td>
+					<td>
+						<a href="req_album_result.jsp?title=sel1">I AM</a>
+					</td>
+					<td>2023.04.10</td>
+				</tr>
+				<tr>
+					<td>
+						<img alt="pic1" src="ive.jpg" width="100px" height="100px">
+					</td>
+					<td>IVE (아이브)</td>
+					<td>
+						<a href="req_album_result.jsp?title=sel2">Kitsch</a>
+					</td>
+					<td>2023.04.10</td>
+				</tr>
+			</table>
+	</div>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

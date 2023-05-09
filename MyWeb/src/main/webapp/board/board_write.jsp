@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <style>
 .virtual-box {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 </style>
@@ -29,7 +29,7 @@
                        <form action="/MyWeb/regist.board" method="post">
                            <div class="form-group">
                                <label for="writer" hidden>작성자</label>
-                            <!-- 로그인 성공시 제작된 session id를 이곳에 고정값으로 두고 변경을 하지 못하게.-->
+							<!-- 로그인 성공시 제작된 session id를 이곳에 고정값으로 두고 변경을 하지 못하게.-->
                                <input id="writer" name="bWriter" value="${user.userId}"
                                type="text" class="form-control" placeholder="작성자" readonly>
                            </div>
@@ -44,11 +44,11 @@
                                <textarea id="content" name="bContent" class="form-control" placeholder="게시글 내용을 입력하세요." rows="5"></textarea>
                            </div>
                            
-                           
-                           <div>
+   						
+   						<div>
                             <button type="submit" class="btn btn-primary form-control" onclick="return confirm('등록하시겠습니까?')">등록</button>
                             <button type="button" class="btn btn-danger form-control" onclick="location.href=">취소</button>
-                           </div>
+                       	</div>
                        </form>
                        
                    </div>
