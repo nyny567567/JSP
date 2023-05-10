@@ -1,3 +1,7 @@
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.myweb.user.service.IUserService;
 
 public class UserController {
 	private static final long serialVersionUID = 1L;
@@ -11,13 +15,13 @@ public class UserController {
 		
 	}
 	
-	protected void service(HttpServletRequest request, HttpservletResponse response)
+	protected void service(HttpServletRequest request, HttpServletResponse response)
 	
 	
 	switch (uri) {
 	case "joinPage" :
 		System.out.println("회원 가입 페이지로 이동 요청!");
-		response.sendRedirect("user/user")
+		response.sendRedirect("user/user");
 	
 	break;
 	

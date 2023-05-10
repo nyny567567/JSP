@@ -6,6 +6,8 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+import com.myweb.user.model.UserVO;
+
 //DAO(Data
 //무분별한 객체 생성을 막기 위해 싱글톤 디자인 패턴으로 구축합니다.
 public class UserDAO {
