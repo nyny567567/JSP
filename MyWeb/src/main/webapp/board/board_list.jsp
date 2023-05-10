@@ -79,7 +79,11 @@
 						<ul class="pagination pagination-lg">
 						
 						<%-- 이전 버튼 --%>
+<<<<<<< HEAD
                      	<c:if test="${pc.prev}">
+=======
+                     <c:if test="${pc.prev}">
+>>>>>>> 53e6a99af68d1867ed83f5e3c0733cb3e79dbc18
 	                        <li class="page-item"><a class="page-link"
 	                           href="/MyWeb/list.board?page=${pc.beginPage-1}&cpp=${pc.paging.cpp}"
 	                           style="background-color: #643691; margin-top: 0; height: 40px; color: white; border: 0px solid #f78f24; opacity: 0.8">이전</a>
@@ -89,6 +93,7 @@
                     	<%-- 페이지 버튼 --%>
    						<c:forEach var="pageNum" begin="${pc.beginPage}" end="${pc.endPage}">
 	                        <li class="page-item">
+<<<<<<< HEAD
 	                        <a href="/MyWeb/list.board?page=${pageNum}&cpp=${pc.paging.cpp}" class="page-link"
 	                           style="margin-top: 0; height: 40px; color: pink; border: 1px solid #643691; ${pageNum == pc.paging.page ? 'background-color: orange' : ''}">${pageNum}</a>
 	                        </li>
@@ -96,11 +101,26 @@
 
                      	<%-- 다음 버튼 --%>
     					<c:if test="${pc.next}">
+=======
+	                        <a href="/MyWeb/list.board?page=${pageNum}&cpp="${pc.paging.cpp}" class="page-link"
+	                           style="margin-top: 0; height: 40px; color: pink; border: 1px solid #643691; ''}">${pageNum}</a>
+	                        </li>
+	                        </c:forEach>
+               			
+
+                     	<%-- 다음 버튼 --%>
+    					<c:if test="">
+>>>>>>> 53e6a99af68d1867ed83f5e3c0733cb3e79dbc18
 	                        <li class="page-item"><a class="page-link"
 	                           href="/MyWeb/list.board?page=${pc.endPage+1}&cpp=${pc.paging.cpp}"
 	                           style="background-color: #643691; margin-top: 0; height: 40px; color: white; border: 0px solid #f78f24; opacity: 0.8">다음</a>
 	                        </li>
+<<<<<<< HEAD
 						</c:if>
+=======
+	                        </c:if>
+						</ul>
+>>>>>>> 53e6a99af68d1867ed83f5e3c0733cb3e79dbc18
 						</ul>
 					</td>
 				</tr>

@@ -57,6 +57,10 @@ public class BoardDAO implements IBoardDAO {
 	@Override
 	public List<BoardVO> listBoard(PageVO paging) {
 		List<BoardVO> articles = new ArrayList<>();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 53e6a99af68d1867ed83f5e3c0733cb3e79dbc18
 		String sql = "SELECT * FROM"
 				+ "    ("
 				+ "    SELECT ROWNUM AS rn, tbl.* FROM"
@@ -67,6 +71,12 @@ public class BoardDAO implements IBoardDAO {
 				+ "    )"
 				+ "WHERE rn > " + (paging.getPage()-1) * paging.getCpp()
 				+ " AND rn <= " + paging.getPage() * paging.getCpp();
+<<<<<<< HEAD
+=======
+=======
+		String sql = "SELECT * FROM my_board ORDER BY board_id DESC";
+>>>>>>> 8cd00c04ab352c27dfee5da82073d9cfe5d9b15b
+>>>>>>> 53e6a99af68d1867ed83f5e3c0733cb3e79dbc18
 		try(Connection conn = ds.getConnection();
 				PreparedStatement pstmt = conn.prepareStatement(sql);
 				ResultSet rs = pstmt.executeQuery()) {
@@ -177,6 +187,10 @@ public class BoardDAO implements IBoardDAO {
 			pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 53e6a99af68d1867ed83f5e3c0733cb3e79dbc18
 		}	
 	}
 	
@@ -195,6 +209,13 @@ public class BoardDAO implements IBoardDAO {
 		}
 		
 		return count;
+<<<<<<< HEAD
+=======
+=======
+		}
+		
+>>>>>>> 8cd00c04ab352c27dfee5da82073d9cfe5d9b15b
+>>>>>>> 53e6a99af68d1867ed83f5e3c0733cb3e79dbc18
 	}
 	
 

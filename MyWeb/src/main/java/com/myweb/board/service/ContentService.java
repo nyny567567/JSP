@@ -1,6 +1,13 @@
 package com.myweb.board.service;
 
+<<<<<<< HEAD
 import javax.servlet.http.Cookie;
+=======
+<<<<<<< HEAD
+import javax.servlet.http.Cookie;
+=======
+>>>>>>> 8cd00c04ab352c27dfee5da82073d9cfe5d9b15b
+>>>>>>> 53e6a99af68d1867ed83f5e3c0733cb3e79dbc18
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,6 +22,7 @@ public class ContentService implements IBoardService {
 		int bId = Integer.parseInt(request.getParameter("bId"));
 		
 		BoardDAO dao = BoardDAO.getInstance();
+<<<<<<< HEAD
 		
 		/*
 		 # 쿠키로 조회수를 컨트롤 해 보자.
@@ -33,6 +41,17 @@ public class ContentService implements IBoardService {
 		boolean flag = false;
 		Cookie[] cookies = request.getCookies();
 		if(cookies != null) {
+=======
+		dao.upHit(bId);
+<<<<<<< HEAD
+		
+		
+		String bNum = String.valueOf(bId);
+		
+		boolean flag = false;
+		Cookie[] cookies = request.getCookies();
+		if(cookies !=null) {
+>>>>>>> 53e6a99af68d1867ed83f5e3c0733cb3e79dbc18
 			for(Cookie c : cookies) {
 				if(c.getName().equals(bNum)) {
 					flag = true;
@@ -46,9 +65,19 @@ public class ContentService implements IBoardService {
 				dao.upHit(bId);
 			}
 		}
+<<<<<<< HEAD
 		
 		
 		
+=======
+//		String bNum = request.getParameter("bId");
+		
+		
+		
+		
+=======
+>>>>>>> 8cd00c04ab352c27dfee5da82073d9cfe5d9b15b
+>>>>>>> 53e6a99af68d1867ed83f5e3c0733cb3e79dbc18
 		BoardVO vo = dao.contentBoard(bId);
 		
 		vo.setContent(vo.getContent().replace("\r\n", "<br>"));

@@ -1,5 +1,6 @@
 package com.myweb.board.commons;
 
+<<<<<<< HEAD
 import java.io.IOException;
 
 import javax.servlet.Filter;
@@ -33,3 +34,15 @@ public class TestFilter implements Filter {
 
 
 
+=======
+
+
+public class TestFilter implements Filter {
+
+//@WebFilter("/*")
+public class testFilter implements Filter{
+	
+	@Override
+	public void doFilter(ServletRequest)
+}
+>>>>>>> 53e6a99af68d1867ed83f5e3c0733cb3e79dbc18
