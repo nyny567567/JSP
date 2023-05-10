@@ -1,6 +1,9 @@
 package com.myweb.board.service;
 
+<<<<<<< HEAD
 import javax.servlet.http.Cookie;
+=======
+>>>>>>> 8cd00c04ab352c27dfee5da82073d9cfe5d9b15b
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,6 +19,7 @@ public class ContentService implements IBoardService {
 		
 		BoardDAO dao = BoardDAO.getInstance();
 		dao.upHit(bId);
+<<<<<<< HEAD
 		
 		
 		String bNum = String.valueOf(bId);
@@ -41,6 +45,8 @@ public class ContentService implements IBoardService {
 		
 		
 		
+=======
+>>>>>>> 8cd00c04ab352c27dfee5da82073d9cfe5d9b15b
 		BoardVO vo = dao.contentBoard(bId);
 		
 		vo.setContent(vo.getContent().replace("\r\n", "<br>"));
