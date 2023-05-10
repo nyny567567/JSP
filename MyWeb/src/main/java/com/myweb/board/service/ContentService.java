@@ -1,5 +1,6 @@
 package com.myweb.board.service;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,6 +16,31 @@ public class ContentService implements IBoardService {
 		
 		BoardDAO dao = BoardDAO.getInstance();
 		dao.upHit(bId);
+		
+		
+		String bNum = String.valueOf(bId);
+		
+		boolean flag = false;
+		Cookie[] cookies = request.getCookies();
+		if(cookies !=null) {
+			for(Cookie c : cookies) {
+				if(c.getName().equals(bNum)) {
+					flag = true;
+					break;
+				}
+			}
+			if(!flag) {
+				Cookie hitCoo = new Cookie(bNum, bNum);
+				hitCoo.setMaxAge(15);
+				response.addCookie(hitCoo);
+				dao.upHit(bId);
+			}
+		}
+//		String bNum = request.getParameter("bId");
+		
+		
+		
+		
 		BoardVO vo = dao.contentBoard(bId);
 		
 		vo.setContent(vo.getContent().replace("\r\n", "<br>"));

@@ -79,28 +79,30 @@
 						<ul class="pagination pagination-lg">
 						
 						<%-- 이전 버튼 --%>
-                     
+                     <c:if test="${pc.prev}">
 	                        <li class="page-item"><a class="page-link"
-	                           href="#"
+	                           href="/MyWeb/list.board?page=${pc.beginPage-1}&cpp=${pc.paging.cpp}"
 	                           style="background-color: #643691; margin-top: 0; height: 40px; color: white; border: 0px solid #f78f24; opacity: 0.8">이전</a>
 	                        </li>
-                     	
+                     	</c:if>
 
                     	<%-- 페이지 버튼 --%>
-   						
+   						<c:forEach var="pageNum" begin="${pc.beginPage}" end="${pc.endPage}">
 	                        <li class="page-item">
-	                        <a href="#" class="page-link"
-	                           style="margin-top: 0; height: 40px; color: pink; border: 1px solid #643691; ''}">1</a>
+	                        <a href="/MyWeb/list.board?page=${pageNum}&cpp="${pc.paging.cpp}" class="page-link"
+	                           style="margin-top: 0; height: 40px; color: pink; border: 1px solid #643691; ''}">${pageNum}</a>
 	                        </li>
+	                        </c:forEach>
                			
 
                      	<%-- 다음 버튼 --%>
-    					
+    					<c:if test="">
 	                        <li class="page-item"><a class="page-link"
-	                           href="#"
+	                           href="/MyWeb/list.board?page=${pc.endPage+1}&cpp=${pc.paging.cpp}"
 	                           style="background-color: #643691; margin-top: 0; height: 40px; color: white; border: 0px solid #f78f24; opacity: 0.8">다음</a>
 	                        </li>
-						
+	                        </c:if>
+						</ul>
 						</ul>
 					</td>
 				</tr>
